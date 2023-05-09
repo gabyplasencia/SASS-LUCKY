@@ -1,1 +1,10 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, black 20%, rgba(56, 13, 56, 0.904) 70%, rgba(140, 122, 19, 0.919));
+}/*# sourceMappingURL=main.css.map */
