@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Crimson+Text&family=Rye&display=swap');
 $colors: (
    primario: rgb(74, 1, 74),
-   secundario: rgb(140, 122, 19),
-   blanco: white,
-   negro: black
+   secundario: rgb(173, 149, 14)
 );
+
+$perspective: 35rem;
+$titulo: 'Rye', cursive;
+$titulo-carta: 'Castoro Titling', cursive;
+$contenido-carta: 'Crimson Text', serif;
+
+@mixin forma-carta {
+    height: 16.5rem;
+    width: 11.5rem; 
+    position: relative;
+    margin: 1rem;
+ }
 
 @function color($color-name){
     @return map-get($colors , $color-name)
-}
-
-$perspective: 35rem;
-
-@mixin forma-carta {
-   height: 16.5rem;
-   width: 11.5rem; 
-   position: relative;
-   margin: 1rem;
 }
 
 * {
@@ -43,12 +44,12 @@ body{
 }
 
 .titulo {
-    font-family: 'Acme', sans-serif;
+    font-family: $titulo;
     color: color(secundario);
     font-size: 5rem;
     font-weight: 700;
-    text-transform: capitalize;
-    padding-top: 3rem;
+    text-align: center;
+    margin-top: 4rem;
 }
 
 .carta {
@@ -64,31 +65,54 @@ body{
     transition: 0.4s;
 }
 
-.carta .front {
-    transform: perspective($perspective) rotateY(0deg);
+.carta {
+    .front{
+        transform: perspective($perspective) rotateY(0deg);
+
+        img {
+            position: absolute;
+            object-fit: cover;
+        }
+    }
 }
 
-.carta .front img {
-    position: absolute;
-    object-fit: cover;
+.carta {
+    .back{
+        transform: perspective($perspective) rotateY(180deg);
+        background: color(secundario);
+        border-radius: 0.35rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0.75rem;
+
+        h4 {
+            font-family: $titulo-carta;
+            font-size: 2em;
+            font-weight: 400px;
+            color: color(primario);
+            margin-bottom: 0.5em;
+        }
+
+        span {
+            font-family: $contenido-carta;
+            font-size: 1.15em;
+            color: beige;
+        }
+    }
 }
 
-.carta .back{
-    transform: perspective($perspective) rotateY(180deg);
-    background: color(secundario);
-    color: black;
-    border-radius: .25rem;
-    display: flex;
-    flex-direction: column;
-    padding: 0.75rem;
+
+.carta:hover {
+
+    .front{
+        transform: perspective($perspective) rotateY(180deg);
+    }
+    .back {
+        transform: perspective($perspective) rotateY(360deg);
+    }
 }
 
-.carta:hover .front {
-    transform: perspective($perspective) rotateY(180deg);
-}
 
-.carta:hover .back {
-    transform: perspective($perspective) rotateY(360deg);
-}
 
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Crimson+Text&family=Rye&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, black 20%, rgb(74, 1, 74) 70%, rgb(140, 122, 19));
+  background: linear-gradient(135deg, black 20%, rgb(74, 1, 74) 70%, rgb(173, 149, 14));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,12 +24,12 @@ body {
 }
 
 .titulo {
-  font-family: "Acme", sans-serif;
-  color: rgb(140, 122, 19);
+  font-family: "Rye", cursive;
+  color: rgb(173, 149, 14);
   font-size: 5rem;
   font-weight: 700;
-  text-transform: capitalize;
-  padding-top: 3rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .carta {
@@ -51,7 +51,6 @@ body {
 .carta .front {
   transform: perspective(35rem) rotateY(0deg);
 }
-
 .carta .front img {
   position: absolute;
   -o-object-fit: cover;
@@ -60,18 +59,29 @@ body {
 
 .carta .back {
   transform: perspective(35rem) rotateY(180deg);
-  background: rgb(140, 122, 19);
-  color: black;
-  border-radius: 0.25rem;
+  background: rgb(173, 149, 14);
+  border-radius: 0.35rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
   padding: 0.75rem;
+}
+.carta .back h4 {
+  font-family: "Castoro Titling", cursive;
+  font-size: 2em;
+  font-weight: 400px;
+  color: rgb(74, 1, 74);
+  margin-bottom: 0.5em;
+}
+.carta .back span {
+  font-family: "Crimson Text", serif;
+  font-size: 1.15em;
+  color: beige;
 }
 
 .carta:hover .front {
   transform: perspective(35rem) rotateY(180deg);
 }
-
 .carta:hover .back {
   transform: perspective(35rem) rotateY(360deg);
 }/*# sourceMappingURL=main.css.map */
