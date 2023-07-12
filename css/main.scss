@@ -99,7 +99,7 @@ body::after{
             font-family: $titulo-carta;
             font-size: 2em;
             font-weight: 400px;
-            color: color(primario);
+            color: white;
             margin-bottom: 0.5em;
         }
 
@@ -112,12 +112,16 @@ body::after{
 }
 
 .carta:hover {
+    transform: scale(1.1);
+    
+}
 
+.selected{
     .front{
-        transform: perspective($perspective) rotateY(180deg);
+        transform: perspective($perspective) rotateY(180deg) scale(1.5);
     }
     .back {
-        transform: perspective($perspective) rotateY(360deg);
+        transform: perspective($perspective) rotateY(360deg) scale(1.5);
     }
 }
 

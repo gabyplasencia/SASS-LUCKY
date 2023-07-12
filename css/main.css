@@ -77,7 +77,7 @@ body::after {
   font-family: "Castoro Titling", cursive;
   font-size: 2em;
   font-weight: 400px;
-  color: rgb(25, 7, 32);
+  color: white;
   margin-bottom: 0.5em;
 }
 .carta .back span {
@@ -86,9 +86,13 @@ body::after {
   color: beige;
 }
 
-.carta:hover .front {
-  transform: perspective(35rem) rotateY(180deg);
+.carta:hover {
+  transform: scale(1.1);
 }
-.carta:hover .back {
-  transform: perspective(35rem) rotateY(360deg);
+
+.selected .front {
+  transform: perspective(35rem) rotateY(180deg) scale(1.5);
+}
+.selected .back {
+  transform: perspective(35rem) rotateY(360deg) scale(1.5);
 }/*# sourceMappingURL=main.css.map */

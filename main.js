@@ -1,8 +1,11 @@
-const card = document.querySelectorAll(".carta");
+const cards = document.querySelectorAll(".carta");
 
-card.addEventListener("click", (e) => {
+cards.forEach ((card) =>{
+
+    card.addEventListener("click", (e) => {
     
-    const selectedCard = e.target.closest(".carta");
-    console.log("carta elegida");
-    if (!selectedCard) return;
+        const selectedCard = e.target.closest(".carta");
+        if (!selectedCard) return;
+        
+    })
 })
