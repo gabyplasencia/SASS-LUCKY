@@ -9,6 +9,7 @@ body {
   background: linear-gradient(115deg, rgb(25, 7, 32), rgb(8, 7, 37));
   position: relative;
   isolation: isolate;
+  height: 100vh;
 }
 
 body::after {
@@ -16,15 +17,13 @@ body::after {
   position: absolute;
   z-index: -1;
   inset: 0;
-  opacity: 1;
-  background-image: url(constellation.jpg);
-  background-size: 5rem;
-  background-repeat: space;
+  opacity: 0.2;
+  background-image: url(../img/constellation.jpg);
+  background-size: 100%;
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
+  margin: 2rem auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,11 +32,11 @@ body::after {
 
 .titulo {
   font-family: "Rye", cursive;
+  padding-top: 2rem;
   color: white;
   font-size: 5rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 4rem;
 }
 
 .carta {
