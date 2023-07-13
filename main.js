@@ -7,5 +7,6 @@ cards.forEach ((card) =>{
         const selectedCard = e.target.closest(".carta");
         if (!selectedCard) return;
         
+        card.classList.add("selected");
     })
 })
