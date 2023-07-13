@@ -65,6 +65,10 @@ body::after{
     @include forma-carta();
 }
 
+.selected, .hidden{
+    transition: all 0.4s;
+}
+
 .carta .face{
     position: absolute;
     height: 100%;
@@ -88,7 +92,7 @@ body::after{
 .carta {
     .back{
         transform: perspective($perspective) rotateY(180deg);
-        background: color(secundario);
+        background: rgb(15, 58, 15);
         border-radius: 0.35rem;
         display: flex;
         flex-direction: column;
@@ -113,7 +117,6 @@ body::after{
 
 .carta:hover {
     transform: scale(1.1);
-    
 }
 
 .selected{
@@ -123,6 +126,10 @@ body::after{
     .back {
         transform: perspective($perspective) rotateY(360deg) scale(1.5);
     }
+}
+
+.hidden{
+        display: none;
 }
 
 

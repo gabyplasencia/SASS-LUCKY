@@ -46,6 +46,10 @@ body::after {
   margin: 1rem;
 }
 
+.selected, .hidden {
+  transition: all 0.4s;
+}
+
 .carta .face {
   position: absolute;
   height: 100%;
@@ -66,7 +70,7 @@ body::after {
 
 .carta .back {
   transform: perspective(35rem) rotateY(180deg);
-  background: rgb(8, 7, 37);
+  background: rgb(15, 58, 15);
   border-radius: 0.35rem;
   display: flex;
   flex-direction: column;
@@ -95,4 +99,8 @@ body::after {
 }
 .selected .back {
   transform: perspective(35rem) rotateY(360deg) scale(1.5);
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
