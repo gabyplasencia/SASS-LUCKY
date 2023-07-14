@@ -5,16 +5,17 @@ $colors: (
    secundario: rgb(8, 7, 37)
 );
 
-$perspective: 35rem;
+$perspective: 30rem;
 $titulo: 'Rye', cursive;
 $titulo-carta: 'Castoro Titling', cursive;
 $contenido-carta: 'Crimson Text', serif;
 
 @mixin forma-carta {
-    height: 16.5rem;
-    width: 11.5rem; 
+    height: 22.6rem;
+    width: 13rem; 
     position: relative;
     margin: 1rem;
+    transition: all 0.4s;
  }
 
 @function color($color-name){
@@ -27,11 +28,16 @@ $contenido-carta: 'Crimson Text', serif;
     padding: 0;
 } 
 
+img{
+  width: 100%;
+}
+
 body{
     background: linear-gradient(115deg, color(primario), color(secundario));
     position: relative;
     isolation: isolate; 
     height: 100vh;
+    overflow: hidden;
 }
 
 body::after{
@@ -80,6 +86,7 @@ body::after{
 
 .carta {
     .front{
+        border-radius: 0.8rem;
         transform: perspective($perspective) rotateY(0deg);
 
         img {
@@ -116,15 +123,15 @@ body::after{
 }
 
 .carta:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .selected{
     .front{
-        transform: perspective($perspective) rotateY(180deg) scale(1.5);
+        transform: perspective($perspective) rotateY(180deg) scale(1.3);
     }
     .back {
-        transform: perspective($perspective) rotateY(360deg) scale(1.5);
+        transform: perspective($perspective) rotateY(360deg) scale(1.3);
     }
 }
 
